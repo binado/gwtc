@@ -1,0 +1,50 @@
+[project]
+authors = [{name = "binado", email = "bernardopveronese@gmail.com"}]
+name = "gwtc"
+description = "Fetch and manipulate public GWTC data"
+readme = "README.md"
+requires-python = ">=3.10, <3.12"
+keywords = ["gravitational-waves"]
+version = "0.1.0"
+license = { file = "LICENSE" }
+classifiers = ["Programming Language :: Python :: 3"]
+
+[project.scripts]
+get_localizations = "gwtc.scripts.get_localizations:main"
+get_maximum_likelihood_values = "gwtc.scripts.get_maximum_likelihood_values:main"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tool.pixi.pypi-dependencies]
+gwtc = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+pesummary = ">=1.3.2,<2"
+healpy = ">=1.18.1,<2"
+h5py = ">=3.13.0,<4"
+"ligo.skymap" = ">=2.4.0,<3"
+arviz = ">=0.21.0,<0.22"
+
+[tool.pixi.feature.dev.dependencies]
+ipython = "*"
+jupyterlab = ">=4.4.3,<5"
+pixi-kernel = ">=0.6.4,<0.7"
+ipydatagrid = ">=1.4.0,<2"
+ruff = ">=0.12.1,<0.13"
+pre-commit = ">=4.2.0,<5"
+nbclean = ">=0.3.2,<0.4"
+
+[tool.pixi.environments]
+dev = { features = ["dev"], solve-group = "default" }
+
+[tool.ruff.lint]
+select = ["TID252"]
+fixable = ["ALL"]
