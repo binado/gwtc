@@ -2,13 +2,17 @@
 
 Fetch and manipulate public data from the GWTC catalogs.
 
-## Running scripts locally
+## Installation
+
+
+### With pixi (recommended)
 
 1. Clone the repo with
 
 ```shell
 git clone https://github.com/binado/phdrepo.git
 ```
+
 2. Install [`pixi`](https://pixi.sh/dev/installation/#update), a package manager for conda and pypi
 
 3. Run the command
@@ -16,14 +20,34 @@ git clone https://github.com/binado/phdrepo.git
 ```shell
 pixi install -e dev
 ```
-
 to install the dev environment with access to jupyter.
 
-4. To run a scripts, run
+4. To run scripts, run
 
 ```shell
 pixi run [scripts] --help
 ```
+
+### With conda
+
+1. Clone the repo with
+
+```shell
+git clone https://github.com/binado/phdrepo.git
+```
+2. Create a conda enviroment with
+
+```shell
+conda env create -f environment.yml
+conda activate gwtc
+```
+4. Install the package locally with
+
+```shell
+python -m pip install -e .
+```
+
+The package scripts will be added to the PATH.
 
 You can check available scripts in the [project config](./pyproject.toml).
 
