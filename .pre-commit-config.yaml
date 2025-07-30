@@ -29,8 +29,3 @@ repos:
       - id: commitizen
       - id: commitizen-branch
         stages: [pre-push]
-  - repo: https://github.com/binado/pre-commit-pixi-environment-file
-    rev: "02885ce1776cfe91ab6e2cc839c4fd34c4eb5b6e"
-    hooks:
-      - id: sync-environments
-        args: [--name, gwtc, --explicit]

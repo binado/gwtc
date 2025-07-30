@@ -3701,7 +3701,7 @@ packages:
 - pypi: ./
   name: gwtc
   version: 0.1.0
-  sha256: b5e1694af85acefdc06a90b488554846d0bdafddd5877b25218bd0d3af8dfe72
+  sha256: 0c24bd5ea43eafb63f1496ea0a4a95ad722e6d09167cc56ea1dedb88f498c5e8
   requires_python: '>=3.10,<3.12'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/h11-0.16.0-pyhd8ed1ab_0.conda

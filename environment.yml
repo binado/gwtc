@@ -1,0 +1,10 @@
+name: gwtc
+channels:
+- https://conda.anaconda.org/conda-forge/
+dependencies:
+- arviz=0.21.0
+- h5py=3.13.0
+- healpy=1.18.1
+- ligo.skymap=2.4.0
+- pesummary=1.3.2
+- python=3.11.13
